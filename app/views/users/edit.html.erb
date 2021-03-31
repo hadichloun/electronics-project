@@ -1,0 +1,7 @@
+<h1> Edit User Information Below </h1>
+<%=form_for User.new do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+  
+  <%= f.submit "Submit New Info" %>
+  <% end %> 

@@ -1,4 +1,8 @@
 class User < ApplicationRecord
-    has_many :products
-    has_many :user_products, through: :products 
+    has_secure_password
+
+    has_many :user_products
+    has_many :products, through: :user_products 
+
+    validates :username, uniqueness: true
 end

@@ -1,9 +1,8 @@
-<h1> Test Show Page </h1>
-<hr>
-<h2> User Profile Page </h2>
-<h3>User Info:</h3><br>
-<li>
+<h1> User: <%= @user.name %> </h1>
 
-    <%=@user.username%>
+# <hr/>
 
-</li>
+# <h3> Sensitive user data </h3>
+
+# <%= button_to "log out", "/logout", method: :delete %>
+

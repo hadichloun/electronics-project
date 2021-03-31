@@ -3,8 +3,15 @@ Rails.application.routes.draw do
   resources :users
   resources :products
 
-  get '/login', to: 'session#login'
-  post '/login', to: 'session#create'
-  post '/logout', to: 'session#destroy'
-  get '/logout', to: 'session#destroy'
+  # new form for log in
+  get "/login", to: "products#index"
+  # action after we submit ^ that form
+  post "/login", to: "sessions#create"  
+
+
+  # # route to logout
+  # delete "/logout", to: "sessions#destroy"
+  # # form for sign up unless? 
+
 end
+

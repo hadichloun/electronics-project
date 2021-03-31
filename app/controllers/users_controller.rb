@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+    before_action :current_user, only: [:show]
+    before_action :not_logged_in, only: [:show] 
+    
     def index
         @user = User.all
     end

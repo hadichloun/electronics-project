@@ -22,7 +22,7 @@ store has many users through products
 
 >: MVP
 -   A user can login
--   A use can make purchases
+-   A user can make purchases
 -   A user can delete their purchases
 
 ****lessons for software development

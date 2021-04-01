@@ -12,7 +12,7 @@ Store.destroy_all
 s1 = Store.create(name:"BestBuy", location:"Chicago")
 s2 = Store.create(name:"Fry's Electronics", location:"Houston")
 s3 = Store.create(name:"Discount Electronics", location:"Baton Rouge")
->>>>>>> hadichloun
+
 p1 = Product.create(name: "Iphone", price: 100)
 p2 = Product.create(name: "Android", price: 50)
 p3 = Product.create(name: "Laptop", price: 500)

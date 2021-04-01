@@ -5,7 +5,10 @@
 <%end%>
     
 
-
+<% @producs.each do |products| %>
+    <li><%= link_to products.name, @products %> <%= products.price %> </li>
+    <% end %>
+    <%= button_to "product", @user, method: :get %>
 
 <%=link_to image_tag("https://www.zdnet.com/a/hub/i/2015/05/29/2b2418b3-3361-49fe-954e-4ad7853d2dfe/t-mo-lg450.jpg")%>
 <br>

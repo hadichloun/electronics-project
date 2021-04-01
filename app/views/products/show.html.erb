@@ -1,4 +1,9 @@
 <h1>Welcome to Electronic Store</h1>
-<li>
-<%=@product.name%>
-</li>
+<h2>
+<p>Thank you for your purchase, you're not getting your money back.</p>
+<li><p>You purchased <%=@product.name%></li> for $<%=@product.price%> enjoy!</p>
+<%=link_to "Home Page", products_path(@product)%>
+<hr>
+</h2>
+<%=image_tag("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;.v=1567022175704")%>
+<br>

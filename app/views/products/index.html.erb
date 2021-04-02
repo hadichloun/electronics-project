@@ -1,7 +1,6 @@
 <h1>Index page for all products</h1>
 <% @products.each do |product|%>
-
-    <%=product%>
+    <li><%=link_to product.name, product%><br><%=product.price%></li>
 <%end%>
     
 

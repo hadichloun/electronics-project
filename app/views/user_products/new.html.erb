@@ -1,0 +1,14 @@
+<h1>Make a purchase here. No refunds</h1>
+<hr>
+<%=form_for @user_product do |f|%>
+    <%=f.label :Purchase%><br><br>
+
+    <%=f.label :User%>
+    <%=f.collection_select :user, User.all, :id, :name%><br>
+
+    <%=f.label :Product%>
+    <%=f.collection_select :product_id, Product.all, :id, :name%><br>
+
+    <%=f.submit "Purchase"%>
+
+    <%end%>

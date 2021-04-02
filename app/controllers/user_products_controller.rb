@@ -1,4 +1,5 @@
- def new
+class UserProductsController < ApplicationController
+    def new
         @user_product = UserProduct.new
     end
 
@@ -8,6 +9,7 @@
 
     def show
         @user_product =UserProduct.find(params[:id])
+        @product = Product.find(params[:id])
     end
 
     def create
@@ -16,6 +18,7 @@
             user_id: params[:user_product][:user_id],
             product_id: params[:user_product][:product_id]
         })
+        redirect_to products_path, notice: "Thank you for your purchase!"
     end
 
     def edit

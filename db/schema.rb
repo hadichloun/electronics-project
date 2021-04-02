@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_03_30_144821) do
   end
 
   create_table "store_products", force: :cascade do |t|
+    t.string "purchase"
     t.integer "store_id"
     t.integer "product_id"
     t.datetime "created_at", precision: 6, null: false
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_03_30_144821) do
   end
 
   create_table "user_products", force: :cascade do |t|
+    t.string "purchase"
     t.integer "user_id"
     t.integer "product_id"
     t.datetime "created_at", precision: 6, null: false

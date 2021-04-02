@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    def new 
+    def new
         @user = User.new
     end
 
@@ -27,4 +27,10 @@ class SessionsController < ApplicationController
         session.clear
         redirect_to login_path
     end
+
+    private
+    def sessions_params
+        params.require(:user).permit(:id, :name, :email, :password )
+    end
+
 end
